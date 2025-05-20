@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .TituloIndex {
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <!--Inicio parte Fixa-->
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"><img src="imagens/logo.jpg" alt="logo" width="200px"></a>
+                <li><a href="quemSomos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="produtos.html#PizzasSalgadas">Pizzas Salgadas</a>
+                        <a href="produtos.html#PizzasDoces">Pizzas Doces</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="contato.html">Contatos</a>
+                    <div class="dropdown-content">
+                        <a href="contato.html#Contato">Contato</a>
+                        <a href="contato.html#Localizacao">Localização</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="cxPesquisa">
+            <input type="text" id="campoBusca" placeholder="Pesquisar..." onkeyup="filtrar()" />
+            <button onclick="filtrar()">🔍</button>
+        </div>
+    </header>
+    <!--Fim da parte Fixa-->
+
+    <img src="imagens/fundoIndex.jpg" alt="" width="100%">
+
+
+
+    <center>
+        <h1 class="TituloIndex">Ofertas Do Dia</h1>
+    </center>
+
+    <div class="container"> <!--DIV 1-->
+        <div class="imagensCombo">
+            <img src="imagens/combo1.png" alt="" height="100%">
+        </div> <!--FIM DIV 1-->
+
+
+
+        <div class="imagensCombo"> <!--DIV 2-->
+            <img src="imagens/combo3.jpg" alt="" width="100%">
+
+        </div> <!--FIM DIV 2-->
+
+        <div class="imagensCombo"> <!--DIV 3-->
+            <img src="imagens/combo2.jpg" alt="" width="100%">
+        </div> <!--FIM DIV 3-->
+
+    </div>
+
+    <footer> <!--Tag rodapé -->
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+        <p>Site desenvolvido pelos estudante Lucas André Both e Sara Cristina Bertolla</p>
+    </footer> <!--Fim rodapé-->
+
+
+    <script src="script.js" crossorigin="anonymous"></script>
+</body>
+<style>
+
+</style>
+
+
+</html>

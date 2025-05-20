@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        #fundoQuemSomos {
+            background-color: #ffffff;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Inicio parte Fixa-->
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"><img src="imagens/logo.jpg" alt="logo" width="200px"></a>
+                <li><a href="quemSomos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="produtos.html#PizzasSalgadas">Pizzas Salgadas</a>
+                        <a href="produtos.html#PizzasDoces">Pizzas Doces</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="contato.html">Contatos</a>
+                    <div class="dropdown-content">
+                        <a href="contato.html#Contato">Contato</a>
+                        <a href="contato.html#Localizacao">Localização</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="cxPesquisa">
+            <input type="text" id="campoBusca" placeholder="Pesquisar..." onkeyup="filtrar()" />
+            <button onclick="filtrar()">🔍</button>
+        </div>
+    </header>
+    <!--Fim da parte Fixa-->
+
+    <div class="borda" id="fundoQuemSomos">
+        <h1>Quem Somos</h1>
+
+        <p>Olá ! Somos a Bella Pizza, uma pizzaria criada por dois amigos, Sara e Lucas, que decidiram transformar a
+            paixão por pizza em um negócio sério.</p>
+
+
+        <p>A gente sempre gostou de cozinhar e de reunir amigos em volta da mesa. Com o tempo, veio a ideia: por que não
+            abrir nossa própria pizzaria? Começamos com vontade de fazer algo bem feito, com qualidade, bom atendimento
+            e, claro, pizzas realmente saborosas.</p>
+
+        <p>Desde o início, nosso foco tem sido trabalhar com ingredientes frescos, massas artesanais e um atendimento
+            que respeita cada cliente. Queremos que quem pede uma pizza da Bella Pizza receba mais do que um produto
+            receba um cuidado no preparo, no sabor e no serviço.
+        </p>
+
+        <p>Aqui, a gente está no dia a dia, acompanhando tudo de perto, ouvindo sugestões e sempre buscando melhorar.
+            Nosso compromisso é simples, oferecer uma boa pizza, com preço justo, e entregar um serviço que a gente
+            mesmo gostaria de receber.</p>
+
+        <p>Seja muito bem-vindo à Bella Pizza. Esperamos que você goste e volte sempre!
+        </p> <br><br>
+
+        <p><b>Sara & Lucas</b> <br>
+            Sócios-fundadores</p>
+
+    </div>
+
+    <footer> <!--Tag rodapé -->
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+        <p>Site desenvolvido pelos estudante Lucas André Both e Sara Cristina Bertolla</p>
+    </footer> <!--Fim rodapé-->
+
+
+    <script src="script.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

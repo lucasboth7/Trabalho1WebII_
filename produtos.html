@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .catalogo {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            background-color: rgb(133, 34, 34);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .quadradoPizzas {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(30% - 20px);
+            text-align: center;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+            /* Transição suave para a ampliação */
+        }
+
+        .quadradoPizzas img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .quadradoPizzas h3 {
+            margin: 10px 0;
+        }
+
+        .quadradoPizzas p {
+            color: #666;
+        }
+
+        .quadradoPizzas:hover {
+            transform: scale(1.1);
+            /* Amplia a div inteira em 10% */
+        }
+    </style>
+</head>
+
+<body>
+    <!--Inicio parte Fixa-->
+    <header>
+        <nav>
+            <ul>
+                <a href="index.html"><img src="imagens/logo.jpg" alt="logo" width="200px"></a>
+                <li><a href="quemSomos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="produtos.html#PizzasSalgadas">Pizzas Salgadas</a>
+                        <a href="produtos.html#PizzasDoces">Pizzas Doces</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="contato.html">Contatos</a>
+                    <div class="dropdown-content">
+                        <a href="contato.html#Contato">Contato</a>
+                        <a href="contato.html#Localizacao">Localização</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="cxPesquisa">
+            <input type="text" id="campoBusca" placeholder="Pesquisar..." onkeyup="filtrar()" />
+            <button onclick="filtrar()">🔍</button>
+        </div>
+    </header>
+    <!--Fim da parte Fixa-->
+
+    <div class="borda">
+        <h1>Catálogo de Nossos Produtos</h1>
+
+        <h2>Pizzas Salgadas</h2>
+
+        <div class="catalogo" id="PizzasSalgadas">
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaCalabresa.png" alt="">
+                <h3>Pizza Calabresa</h3>
+                <p>Calabresa, cebola roxa, azeitonas e molho especial</p>
+            </div>
+
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaFrangoCatupiri.jpg" alt="">
+                <h3>Pizza Frango</h3>
+                <p>Frango desfiado, milho, catupiry e orégano.</p>
+            </div>
+
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaPortuguesa.png" alt="">
+                <h3>Pizza Portuguesa</h3>
+                <p>Presunto, ovos, cebola, azeitonas, queijo e tomate.</p>
+            </div>
+
+            <!--
+            <div class="quadradoPizzas">
+                <img src="" alt="">
+                <h3></h3>
+                <p></p>
+            </div>
+            -->
+        </div>
+
+        <h2>Pizzas Doces</h2>
+        <div class="catalogo" id="PizzasDoces">
+
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaKitKat.png" alt="">
+                <h3>Pizza de Kit Kat</h3>
+                <p>Chocolate ao leite, pedaços de Kit Kat e cobertura cremosa de chocolate.</p>
+            </div>
+
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaMorango.png" alt="">
+                <h3>Pizza Sensação</h3>
+                <p>Morango fresco, chocolate e calda de frutas vermelhas.</p>
+            </div>
+
+            <div class="quadradoPizzas">
+                <img src="imagens/pizzaBrigadeiro.jpeg" alt="">
+                <h3>Pizza Brigadeiro</h3>
+                <p>Chocolate ao leite, cobertura cremosa de chocolate e granulado.</p>
+            </div>
+
+            <!--<div class="quadradoPizzas">
+                <img src="imagens/" alt="">
+                <h3></h3>
+                <p></p>
+            </div>-->
+        </div>
+
+        <i>
+            <center>
+                <p id="mensagemErro" style="display:none; color:rgb(0, 0, 0); background-color: rgb(255, 255, 255); text-align: center; font-weight: bold;">
+                    Nenhuma pizza foi encontrada <!--Mostra caso a pesquisa deu nada-->
+                </p>
+            </center>
+        </i>
+    </div>
+    <footer> <!--Tag rodapé -->
+        <p>&copy; 2025 Todos os direitos reservados.</p>
+        <p>Site desenvolvido pelos estudante Lucas André Both e Sara Cristina Bertolla</p>
+    </footer> <!--Fim rodapé-->
+
+
+    <script src="script.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
